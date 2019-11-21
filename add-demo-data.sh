@@ -93,7 +93,7 @@ curl --header "Accept: application/json" --header "Content-type: application/jso
 curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/content_metadata --data '{"content_id":3,"key":"ncc:producer","value":"Huseby kompetansesenter"}'
 curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/content_metadata --data '{"content_id":3,"key":"ncc:generator","value":"Skippability Tweaker 0.1.53"}'
 curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/content_metadata --data '{"content_id":3,"key":"ncc:sidebars","value":"4"}'
-curl --header "ept: application/json" --header "CAccontent-type: application/json" --request POST $URL/content_metadata --data '{"content_id":3,"key":"ncc:prodnotes","value":"2"}'
+curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/content_metadata --data '{"content_id":3,"key":"ncc:prodnotes","value":"2"}'
 curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/content_metadata --data '{"content_id":3,"key":"ncc:footnotes","value":"1"}'
 curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/content_metadata --data '{"content_id":3,"key":"ncc:totaltime","value":"00:05:27"}'
 curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/content_metadata --data '{"content_id":3,"key":"ncc:charset","value":"windows-1252"}'
