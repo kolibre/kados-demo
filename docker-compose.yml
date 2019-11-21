@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:11
+    environment:
+      - POSTGRES_PASSWORD=password
+  nginx:
+    image: nginx:1.17.5-alpine
+    volumes:
+      - media:/usr/share/nginx/html
+    ports:
+      - 8080:80
+  kobra:
+    image: kolibreorg/kobra:latest
+    environment:
+      - SECRET_KEY=yourOwnSecretKey
+      - STORAGE_PATH=/srv/media
+      - DATABASE_URL=postgres://postgres:password@postgres:5432/kobra
+      - WAIT_FOR=tcp://postgres:5432
+    volumes:
+      - media:/srv/media
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
+  kados-v1:
+    image: kolibreorg/kados:0.1.3-php7.2
+    ports:
+      - 8081:80
+    depends_on:
+      - kobra
+  kados-v2:
+    image: kolibreorg/kados:0.2.4-php7.2
+    ports:
+      - 8082:80
+    depends_on:
+      - kobra
+
+volumes:
+  media:
