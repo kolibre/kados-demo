@@ -11,6 +11,8 @@ services:
     image: nginx:1.17.5-alpine
     volumes:
       - media:/usr/share/nginx/html
+      - ${PWD}/data/announcements:/usr/share/nginx/html/announcements
+      - ${PWD}/data/questions:/usr/share/nginx/html/questions
     ports:
       - 8080:80
   kobra:
