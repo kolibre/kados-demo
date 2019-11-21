@@ -9,7 +9,6 @@ echo "-----------------"
 echo ""
 curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/users --data '{"username":"kolibre","password":"kolibre","log":true}'
 curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/users --data '{"username":"user1","password":"password","log":true}'
-curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/users --data '{"username":"user1","password":"password","log":true}'
 curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/users --data '{"username":"user2","password":"password","log":true}'
 curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/users --data '{"username":"user3","password":"password","log":true}'
 curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/users --data '{"username":"user4","password":"password","log":true}'
