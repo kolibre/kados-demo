@@ -277,6 +277,14 @@ curl --header "Accept: application/json" --header "Content-type: application/jso
 # curl --header "Accept: application/json" --header "Content-type: application/json" --request POST $URL/user_contents/remove --data '{"content_id":1}'
 
 
+# TODO: insert announcements and questions thought the REST API when it's implemented.
+echo ""
+echo "------------------"
+echo "Apply data fixture"
+echo "------------------"
+echo ""
+docker-compose exec postgres psql -U postgres kobra -f fixture.sql
+
 # Add announcements
 # announcements = Announcement.create([
 #     {category: 'INFORMATION', priority: 'MEDIUM'},

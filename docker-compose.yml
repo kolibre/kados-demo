@@ -5,6 +5,8 @@ services:
     image: postgres:11
     environment:
       - POSTGRES_PASSWORD=password
+    volumes:
+      - ${PWD}/fixture.postgres.sql:/fixture.sql
   nginx:
     image: nginx:1.17.5-alpine
     volumes:
