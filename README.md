@@ -4,7 +4,7 @@ Utilities and data to put up demo instances for [Kolibre-KADOS](https://github.c
 
 ## How to use
 
-Run `docker-compuse up -d` followed by `./add-demo-data.sh`.
+Run `docker-compose up -d` followed by `./add-demo-data.sh`.
 
 You may now connect to:
 
@@ -15,4 +15,4 @@ You may now connect to:
 
 ## Tear down
 
-Run `docker-compose down` followd by `volume rm kados-demo_media`
+Run `docker-compose down` followed by `docker volume rm kados-demo_media`
