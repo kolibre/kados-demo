@@ -23,29 +23,29 @@ INSERT INTO announcement_audios (announcement_text_id, size, length, created_at,
     (4, 63226, 6952, NOW(), NOW());
 
 -- UserAnnouncements
--- INSERT INTO user_announcements (user_id, announcement_id, created_at, updated_at) VALUES
---     (1, 1, NOW(), NOW()),
---     (1, 2, NOW(), NOW()),
---     (2, 1, NOW(), NOW()),
---     (2, 2, NOW(), NOW()),
---     (3, 1, NOW(), NOW()),
---     (3, 2, NOW(), NOW()),
---     (4, 1, NOW(), NOW()),
---     (4, 2, NOW(), NOW()),
---     (5, 1, NOW(), NOW()),
---     (5, 2, NOW(), NOW()),
---     (6, 1, NOW(), NOW()),
---     (6, 2, NOW(), NOW()),
---     (7, 1, NOW(), NOW()),
---     (7, 2, NOW(), NOW()),
---     (8, 1, NOW(), NOW()),
---     (8, 2, NOW(), NOW()),
---     (9, 1, NOW(), NOW()),
---     (9, 2, NOW(), NOW()),
---     (10, 1, NOW(), NOW()),
---     (10, 2, NOW(), NOW()),
---     (11, 1, NOW(), NOW()),
---     (11, 2, NOW(), NOW());
+INSERT INTO user_announcements (user_id, announcement_id, created_at, updated_at) VALUES
+    (1, 1, NOW(), NOW()),
+    (1, 2, NOW(), NOW()),
+    (2, 1, NOW(), NOW()),
+    (2, 2, NOW(), NOW()),
+    (3, 1, NOW(), NOW()),
+    (3, 2, NOW(), NOW()),
+    (4, 1, NOW(), NOW()),
+    (4, 2, NOW(), NOW()),
+    (5, 1, NOW(), NOW()),
+    (5, 2, NOW(), NOW()),
+    (6, 1, NOW(), NOW()),
+    (6, 2, NOW(), NOW()),
+    (7, 1, NOW(), NOW()),
+    (7, 2, NOW(), NOW()),
+    (8, 1, NOW(), NOW()),
+    (8, 2, NOW(), NOW()),
+    (9, 1, NOW(), NOW()),
+    (9, 2, NOW(), NOW()),
+    (10, 1, NOW(), NOW()),
+    (10, 2, NOW(), NOW()),
+    (11, 1, NOW(), NOW()),
+    (11, 2, NOW(), NOW());
 
 -- Questions
 INSERT INTO questions (id, parent_id, question_type_id, created_at, updated_at) VALUES
