@@ -16,11 +16,11 @@ INSERT INTO announcement_texts (announcement_id, text, language_id, created_at, 
     (2, 'Du kan fritt använda och utforska denna tjänst. Kom ihåg att markera meddelandena som lästa efter att du läst dem.', 2, NOW(), NOW());
 
 -- AnnouncementAudios
-INSERT INTO announcement_audios (announcement_text_id, size, length, created_at, updated_at) VALUES
-    (1, 24677, 2594, NOW(), NOW()),
-    (2, 27392, 2880, NOW(), NOW()),
-    (3, 53310, 5680, NOW(), NOW()),
-    (4, 63226, 6952, NOW(), NOW());
+INSERT INTO announcement_audios (announcement_text_id, size, length, mime_type, audio, created_at, updated_at) VALUES
+    (1, 24677, 2594, 'audio/ogg', 'announcement_1.ogg', NOW(), NOW()),
+    (2, 27392, 2880, 'audio/ogg', 'announcement_2.ogg', NOW(), NOW()),
+    (3, 53310, 5680, 'audio/ogg', 'announcement_3.ogg', NOW(), NOW()),
+    (4, 63226, 6952, 'audio/ogg', 'announcement_4.ogg', NOW(), NOW());
 
 -- UserAnnouncements
 INSERT INTO user_announcements (user_id, announcement_id, created_at, updated_at) VALUES
@@ -135,47 +135,47 @@ INSERT INTO question_texts (language_id, text, created_at, updated_at) VALUES
     (2, 'Tack för din feedback.', NOW(), NOW());
 
 -- QuestionAudios
-INSERT INTO question_audios (question_text_id, size, length, created_at, updated_at) VALUES
-    (1, 13817, 1303, NOW(), NOW()),
-    (2, 14634, 1049, NOW(), NOW()),
-    (3, 13649, 1016, NOW(), NOW()),
-    (4, 14255, 1358, NOW(), NOW()),
-    (5, 13414, 971, NOW(), NOW()),
-    (6, 14323, 1427, NOW(), NOW()),
-    (7, 10317, 776, NOW(), NOW()),
-    (8, 11936, 865, NOW(), NOW()),
-    (9, 16948, 1731, NOW(), NOW()),
-    (10, 15906, 1495, NOW(), NOW()),
-    (11, 12455, 920, NOW(), NOW()),
-    (12, 12857, 1475, NOW(), NOW()),
-    (13, 10729, 1016, NOW(), NOW()),
-    (14, 11504, 1092, NOW(), NOW()),
-    (15, 11760, 926, NOW(), NOW()),
-    (16, 13190, 1380, NOW(), NOW()),
-    (17, 9871, 972, NOW(), NOW()),
-    (18, 9975, 997, NOW(), NOW()),
-    (19, 22087, 1985, NOW(), NOW()),
-    (20, 21288, 2002, NOW(), NOW()),
-    (21, 9715, 972, NOW(), NOW()),
-    (22, 13854, 1339, NOW(), NOW()),
-    (23, 19397, 2018, NOW(), NOW()),
-    (24, 20361, 2267, NOW(), NOW()),
-    (25, 19313, 2052, NOW(), NOW()),
-    (26, 21900, 2292, NOW(), NOW()),
-    (27, 17356, 1507, NOW(), NOW()),
-    (28, 21999, 2198, NOW(), NOW()),
-    (29, 11525, 1027, NOW(), NOW()),
-    (30, 15271, 1219, NOW(), NOW()),
-    (31, 8239, 635, NOW(), NOW()),
-    (32, 9086, 662, NOW(), NOW()),
-    (33, 5465, 324, NOW(), NOW()),
-    (34, 8102, 447, NOW(), NOW()),
-    (35, 7485, 394, NOW(), NOW()),
-    (36, 6234, 424, NOW(), NOW()),
-    (37, 5358, 318, NOW(), NOW()),
-    (38, 7797, 429, NOW(), NOW()),
-    (39, 15523, 1368, NOW(), NOW()),
-    (40, 14041, 1320, NOW(), NOW());
+INSERT INTO question_audios (question_text_id, size, length, mime_type, audio, created_at, updated_at) VALUES
+    (1, 13817, 1303, 'audio/ogg', 'question_1.ogg', NOW(), NOW()),
+    (2, 14634, 1049, 'audio/ogg', 'question_2.ogg', NOW(), NOW()),
+    (3, 13649, 1016, 'audio/ogg', 'question_3.ogg', NOW(), NOW()),
+    (4, 14255, 1358, 'audio/ogg', 'question_4.ogg', NOW(), NOW()),
+    (5, 13414, 971, 'audio/ogg', 'question_5.ogg', NOW(), NOW()),
+    (6, 14323, 1427, 'audio/ogg', 'question_6.ogg', NOW(), NOW()),
+    (7, 10317, 776, 'audio/ogg', 'question_7.ogg', NOW(), NOW()),
+    (8, 11936, 865, 'audio/ogg', 'question_8.ogg', NOW(), NOW()),
+    (9, 16948, 1731, 'audio/ogg', 'question_9.ogg', NOW(), NOW()),
+    (10, 15906, 1495, 'audio/ogg', 'question_10.ogg', NOW(), NOW()),
+    (11, 12455, 920, 'audio/ogg', 'question_11.ogg', NOW(), NOW()),
+    (12, 12857, 1475, 'audio/ogg', 'question_12.ogg', NOW(), NOW()),
+    (13, 10729, 1016, 'audio/ogg', 'question_13.ogg', NOW(), NOW()),
+    (14, 11504, 1092, 'audio/ogg', 'question_14.ogg', NOW(), NOW()),
+    (15, 11760, 926, 'audio/ogg', 'question_15.ogg', NOW(), NOW()),
+    (16, 13190, 1380, 'audio/ogg', 'question_16.ogg', NOW(), NOW()),
+    (17, 9871, 972, 'audio/ogg', 'question_17.ogg', NOW(), NOW()),
+    (18, 9975, 997, 'audio/ogg', 'question_18.ogg', NOW(), NOW()),
+    (19, 22087, 1985, 'audio/ogg', 'question_19.ogg', NOW(), NOW()),
+    (20, 21288, 2002, 'audio/ogg', 'question_20.ogg', NOW(), NOW()),
+    (21, 9715, 972, 'audio/ogg', 'question_21.ogg', NOW(), NOW()),
+    (22, 13854, 1339, 'audio/ogg', 'question_22.ogg', NOW(), NOW()),
+    (23, 19397, 2018, 'audio/ogg', 'question_23.ogg', NOW(), NOW()),
+    (24, 20361, 2267, 'audio/ogg', 'question_24.ogg', NOW(), NOW()),
+    (25, 19313, 2052, 'audio/ogg', 'question_25.ogg', NOW(), NOW()),
+    (26, 21900, 2292, 'audio/ogg', 'question_26.ogg', NOW(), NOW()),
+    (27, 17356, 1507, 'audio/ogg', 'question_27.ogg', NOW(), NOW()),
+    (28, 21999, 2198, 'audio/ogg', 'question_28.ogg', NOW(), NOW()),
+    (29, 11525, 1027, 'audio/ogg', 'question_29.ogg', NOW(), NOW()),
+    (30, 15271, 1219, 'audio/ogg', 'question_30.ogg', NOW(), NOW()),
+    (31, 8239, 635, 'audio/ogg', 'question_31.ogg', NOW(), NOW()),
+    (32, 9086, 662, 'audio/ogg', 'question_32.ogg', NOW(), NOW()),
+    (33, 5465, 324, 'audio/ogg', 'question_33.ogg', NOW(), NOW()),
+    (34, 8102, 447, 'audio/ogg', 'question_34.ogg', NOW(), NOW()),
+    (35, 7485, 394, 'audio/ogg', 'question_35.ogg', NOW(), NOW()),
+    (36, 6234, 424, 'audio/ogg', 'question_36.ogg', NOW(), NOW()),
+    (37, 5358, 318, 'audio/ogg', 'question_37.ogg', NOW(), NOW()),
+    (38, 7797, 429, 'audio/ogg', 'question_38.ogg', NOW(), NOW()),
+    (39, 15523, 1368, 'audio/ogg', 'question_39.ogg', NOW(), NOW()),
+    (40, 14041, 1320, 'audio/ogg', 'question_40.ogg', NOW(), NOW());
 
 -- QuestionQuestionTexts
 INSERT INTO question_question_texts (question_id, question_text_id, created_at, updated_at) VALUES
