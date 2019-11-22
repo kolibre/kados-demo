@@ -2,6 +2,19 @@
 
 URL="http://127.0.0.1:3000"
 
+i=0
+while true
+do
+    curl -s $URL/users 2>&1 >> /dev/null && break
+    sleep 1
+    i=$((i+1))
+    if [ $i == 10 ];
+    then
+        echo "service is not responding, exiting..."
+        exit 1
+    fi
+done
+
 echo ""
 echo "-----------------"
 echo "Adding users"
