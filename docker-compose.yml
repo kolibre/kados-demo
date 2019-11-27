@@ -33,6 +33,7 @@ services:
     environment:
       - DODP_SUPPORTED_OPTIONAL_OPERATIONS_SERVICE_PDTB2_KEY_PROVISION=0 # Not supported in kados
       - KADOS_ADAPTER_ARGS=pgsql:host=postgres;port=5432;user=postgres;password=password;dbname=kobra,yourOwnSecretKey
+      - KADOS_WEB_ROOT=/v1
     ports:
       - 8081:80
     depends_on:
@@ -44,6 +45,7 @@ services:
       - DODP_SUPPORTED_OPTIONAL_OPERATIONS_SERVICE_TERMS_OF_SERVICE=0 # Not support in kobra
       - DODP_SUPPORTED_OPTIONAL_OPERATIONS_SERVICE_USER_CREDENTIALS=0 # Now supported in kados
       - KADOS_ADAPTER_ARGS=pgsql:host=postgres;port=5432;user=postgres;password=password;dbname=kobra,yourOwnSecretKey
+      - KADOS_WEB_ROOT=/v2
     ports:
       - 8082:80
     depends_on:
