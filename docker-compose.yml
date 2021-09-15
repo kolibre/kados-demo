@@ -11,10 +11,14 @@ services:
     image: nginx:1.17.5-alpine
     volumes:
       - media:/usr/share/nginx/html
+      - ${PWD}/nginx-demo.conf:/etc/nginx/conf.d/default.conf
       - ${PWD}/data/announcements:/usr/share/nginx/html/announcements
       - ${PWD}/data/questions:/usr/share/nginx/html/questions
     ports:
       - 8080:80
+    depends_on:
+      - kados-v1
+      - kados-v2
   kobra:
     image: kolibreorg/kobra:latest
     environment:
