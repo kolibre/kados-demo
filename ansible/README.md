@@ -2,7 +2,7 @@
 
 ## Prerequisite
 
-`ansible` installed on the system
+`ansible` installed on the host system
 
 ## Installing collections and roles
 
@@ -10,4 +10,4 @@ Run command `ansible-galaxy install -r requirements.yaml` to install dependencie
 
 ## Run playbook
 
-ansible-playbook -K -i inventory/kados.yaml -l kados playbook.yaml --diff
+`ansible-playbook -K -i inventory/kados.yaml -l kados playbook.yaml --diff`
