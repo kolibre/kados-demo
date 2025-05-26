@@ -1,0 +1,4 @@
+all:
+  hosts:
+    kados:
+      ansible_host: kados.kolibre.org

@@ -1,0 +1,12 @@
+collections:
+  # Install commnuity docker
+  - name: community.docker
+    version: 4.3.1
+
+roles:
+  # Install role geerlingguy.docker from Ansible Galaxy
+  - name: geerlingguy.docker
+    version: 7.4.7
+  # Install role Oefenweb.haproxy from Ansible Galaxy
+  - name: Oefenweb.haproxy
+    version: v6.19.0

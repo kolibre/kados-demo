@@ -1,0 +1,7 @@
+- name: kados demo server
+  hosts: kados
+  become: true
+  roles:
+    - geerlingguy.docker
+    - kados
+    - Oefenweb.haproxy

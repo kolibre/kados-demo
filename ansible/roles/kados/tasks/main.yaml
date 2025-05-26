@@ -1,0 +1,27 @@
+- name: Create data dir
+  ansible.builtin.file:
+    path: /opt/kados
+    state: directory
+    mode: 0755
+
+- name: Checkout source from Github
+  ansible.builtin.git:
+    repo: https://github.com/kolibre/kados-demo.git
+    dest: /opt/kados/kados-demo
+
+- name: Install restart script
+  ansible.builtin.copy:
+    src: restart-demo.sh
+    dest: /opt/kados/restart-demo.sh
+    mode: 0775
+
+- name: Configure cron job to restart services every night
+  ansible.builtin.cron:
+    name: restart kados demo
+    minute: '0'
+    hour: '0'
+    job: /opt/kados/reset-demo.sh > /dev/null 2>&1
+
+- name: Start services
+  community.docker.docker_compose_v2:
+    project_src: /opt/kados/kados-demo
